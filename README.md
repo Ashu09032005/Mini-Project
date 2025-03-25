@@ -1,16 +1,16 @@
-# Excel Filter App
+echo "# Excel Filter App
 
 ## Overview
 The **Excel Filter App** is a React-based web application that allows users to upload Excel files, filter records based on a specified duration limit, and download the filtered results.
 
 ## Features
-- Upload multiple Excel files (`.xlsx` or `.xls`).
+- Upload multiple Excel files (\`.xlsx\` or \`.xls\`).
 - Set a duration threshold to filter records.
 - Process and extract records that exceed the given duration.
 - Download the filtered data as an Excel file.
 
 ## Project Structure
-```sh
+\`\`\`sh
 excel-filter-app/     # Root project directory
 │── public/           # Public assets
 │── src/              # Main source code
@@ -26,35 +26,37 @@ excel-filter-app/     # Root project directory
 │── tailwind.config.js # Tailwind CSS config
 │── .gitignore        # Git ignore file
 │── README.md         # Project documentation
-```
-Installation & Setup
+\`\`\`
+
+## Installation & Setup
 Follow these steps to run the project locally:
 
-Clone the repository:
-
+### Clone the repository:
+\`\`\`sh
 git clone https://github.com/your-username/excel-filter-app.git
 cd excel-filter-app
-Install dependencies:
+\`\`\`
 
-
+### Install dependencies:
+\`\`\`sh
 npm install
-Start the development server:
+\`\`\`
 
-
+### Start the development server:
+\`\`\`sh
 npm run dev
+\`\`\`
 
+## Usage
+1. Upload an Excel file (\`.xlsx\` or \`.xls\`).
+2. Set a duration threshold (e.g., 02:00:00).
+3. Click on Process Files to filter records that exceed the duration.
+4. Download the filtered records as an Excel file.
 
+## Technologies Used
+- **React.js** – Frontend framework.
+- **Tailwind CSS** – Styling.
+- **XLSX.js** – Excel file processing.
 
-##Usage
-1)Upload an Excel file (.xlsx or .xls).
-2)Set a duration threshold (e.g., 02:00:00).
-3)Click on Process Files to filter records that exceed the duration.
-4)Download the filtered records as an Excel file.
+" > README.md
 
-
-Technologies Used
-React.js – Frontend framework.
-
-Tailwind CSS – Styling.
-
-XLSX.js – Excel file processing.
