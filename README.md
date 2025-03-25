@@ -26,6 +26,7 @@ excel-filter-app/     # Root project directory
 │── tailwind.config.js # Tailwind CSS config
 │── .gitignore        # Git ignore file
 │── README.md         # Project documentation
+```
 
 
 
