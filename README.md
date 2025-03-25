@@ -28,16 +28,7 @@ excel-filter-app/     # Root project directory
 │── README.md         # Project documentation
 
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-repo/excel-filter-app.git
-   cd excel-filter-app
-2.Install dependencies:
-  ```sh
-  npm install
-3.Start the development server:
-  ```sh
-  npm run dev
+
 ##Usage
 1)Upload an Excel file (.xlsx or .xls).
 2)Set a duration threshold (e.g., 02:00:00).
