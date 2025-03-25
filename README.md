@@ -18,7 +18,6 @@ Make sure you have **Node.js** installed on your system.
 Install dependencies:
 ```sh
 npm install
-
-
-
+Start the development server:
+```sh
 npm run dev
