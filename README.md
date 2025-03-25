@@ -1,12 +1,29 @@
-# React + Vite
+# Excel Filter App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+The **Excel Filter App** is a React-based web application that allows users to upload Excel files, filter records based on a specified duration limit, and download the filtered results.
 
-Currently, two official plugins are available:
+## Features
+- Upload multiple Excel files (`.xlsx` or `.xls`).
+- Set a duration threshold to filter records.
+- Process and extract records that exceed the given duration.
+- Download the filtered data as an Excel file.
+- ## Installation & Setup
+Make sure you have **Node.js** installed on your system.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repo/excel-filter-app.git
+   cd excel-filter-app
+Install dependencies:
 
-## Expanding the ESLint configuration
+sh
+Copy
+Edit
+npm install
+Start the development server:
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+sh
+Copy
+Edit
+npm run dev
