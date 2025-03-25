@@ -58,3 +58,23 @@ npm run dev
 - **React.js** – Frontend framework.
 - **Tailwind CSS** – Styling.
 - **XLSX.js** – Excel file processing.
+  
+## See for yourself
+![image](https://github.com/user-attachments/assets/1b7dd125-4008-4ed1-8410-1e1a2c6faefc)
+![image](https://github.com/user-attachments/assets/3da4913e-76ee-4c15-b0de-74829ecccc62)
+INPUT(excel files):
+![image](https://github.com/user-attachments/assets/8459bc29-e46f-4dfe-8c55-d1c0fb669f71)
+![image](https://github.com/user-attachments/assets/6ec72ef1-ef2f-4dd3-97c2-dadabf1e5320)
+![image](https://github.com/user-attachments/assets/170bc84e-a9cc-4cb1-9580-b99b3379cf27)
+![image](https://github.com/user-attachments/assets/d2bacf81-cfb9-4bb7-ad24-d8b3573282f8)
+![image](https://github.com/user-attachments/assets/78a2e94c-8a25-44e2-a3aa-1fee177b1885)
+
+
+
+
+OUTPUT:
+![image](https://github.com/user-attachments/assets/5cf4c2e0-af65-4739-b0e7-f6d5baae086e)
+
+
+
+
