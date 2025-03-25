@@ -15,9 +15,9 @@ Make sure you have **Node.js** installed on your system.
    ```sh
    git clone https://github.com/your-repo/excel-filter-app.git
    cd excel-filter-app
-Install dependencies:
-```sh
-npm install
-Start the development server:
-```sh
-npm run dev
+2.Install dependencies:
+  ```sh
+  npm install
+3.Start the development server:
+  ```sh
+  npm run dev
