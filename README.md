@@ -27,6 +27,21 @@ excel-filter-app/     # Root project directory
 │── .gitignore        # Git ignore file
 │── README.md         # Project documentation
 ```
+Installation & Setup
+Follow these steps to run the project locally:
+
+Clone the repository:
+
+git clone https://github.com/your-username/excel-filter-app.git
+cd excel-filter-app
+Install dependencies:
+
+
+npm install
+Start the development server:
+
+
+npm run dev
 
 
 
@@ -35,3 +50,11 @@ excel-filter-app/     # Root project directory
 2)Set a duration threshold (e.g., 02:00:00).
 3)Click on Process Files to filter records that exceed the duration.
 4)Download the filtered records as an Excel file.
+
+
+Technologies Used
+React.js – Frontend framework.
+
+Tailwind CSS – Styling.
+
+XLSX.js – Excel file processing.
