@@ -9,7 +9,6 @@ const FileUpload = ({ onFilesUploaded }) => {
             alert("You can upload a maximum of 5 files.");
             return;
         }
-
         setFiles(acceptedFiles);
         onFilesUploaded(acceptedFiles);
     };
@@ -33,5 +32,4 @@ const FileUpload = ({ onFilesUploaded }) => {
         </div>
     );
 };
-
 export default FileUpload;

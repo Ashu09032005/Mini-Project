@@ -2,23 +2,26 @@ import React from "react";
 import * as XLSX from "xlsx";
 
 const REQUIRED_COLUMNS = [
-    "Student Register No.",
-    "Admn No.",
-    "Student Name",
-    "Block Description",
-    "Transaction-Type",
-    "G No",
-    "OT",
-    "OPurpose",
-    "IT",
-    "IPurpose",
-    "Duration",
-    "Total-Duration"
+    "Student Register No.", "Admn No.", "Student Name", "Block Description",
+    "Transaction-Type", "G No", "OT", "OPurpose", "IT", "IPurpose", "Duration", "Total-Duration"
 ];
+
+const convertToSeconds = (duration) => {
+    const regex = /(?:(\d+) HOURS)?\s*(?:(\d+) MINUTES)?\s*(?:(\d+) SECONDS)?/i;
+    const match = duration.match(regex);
+    if (!match) return 0;
+
+    const hours = parseInt(match[1]) || 0;
+    const minutes = parseInt(match[2]) || 0;
+    const seconds = parseInt(match[3]) || 0;
+
+    return hours * 3600 + minutes * 60 + seconds;
+};
 
 const ProcessFiles = ({ files, duration, onProcessComplete }) => {
     const processFiles = async () => {
         const filteredData = [];
+        const maxDuration = convertToSeconds(duration);
 
         for (const file of files) {
             const data = await file.arrayBuffer();
@@ -27,7 +30,6 @@ const ProcessFiles = ({ files, duration, onProcessComplete }) => {
             const sheet = workbook.Sheets[sheetName];
             const jsonData = XLSX.utils.sheet_to_json(sheet);
 
-            // Check if required columns are present
             const fileColumns = Object.keys(jsonData[0] || {});
             const missingColumns = REQUIRED_COLUMNS.filter(col => !fileColumns.includes(col));
 
@@ -36,13 +38,9 @@ const ProcessFiles = ({ files, duration, onProcessComplete }) => {
                 return;
             }
 
-            // Convert duration to seconds for comparison
-            const maxDuration = duration.split(":").reduce((acc, time) => 60 * acc + +time, 0);
-
             const validRecords = jsonData.filter((record) => {
                 if (!record.Duration) return false;
-
-                const recordDuration = record.Duration.split(":").reduce((acc, time) => 60 * acc + +time, 0);
+                const recordDuration = convertToSeconds(record.Duration);
                 return recordDuration >= maxDuration;
             });
 

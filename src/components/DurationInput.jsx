@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const DurationInput = ({ onDurationChange }) => {
-    const [duration, setDuration] = useState("02:00:00");
+    const [duration, setDuration] = useState("2 HOURS: 00 MINUTES: 00 SECONDS");
 
     const handleChange = (e) => {
         setDuration(e.target.value);
@@ -16,7 +16,7 @@ const DurationInput = ({ onDurationChange }) => {
                 value={duration}
                 onChange={handleChange}
                 className="mt-2 p-2 border rounded w-full"
-                placeholder="HH:MM:SS"
+                placeholder="X HOURS: Y MINUTES: Z SECONDS"
             />
         </div>
     );
