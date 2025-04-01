@@ -35,7 +35,8 @@ Follow these steps to run the project locally:
 ### Clone the repository:
 ```sh
 git clone https://github.com/your-username/excel-filter-app.git
-cd excel-filter-app
+cd mini-project
+cd vite-project
 ```
 
 ### Install dependencies:
