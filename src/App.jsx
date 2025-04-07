@@ -6,7 +6,7 @@ import DownloadResult from "./components/DownloadResult";
 
 const App = () => {
   const [files, setFiles] = useState([]);
-  const [duration, setDuration] = useState("2 HOURS: 20 MINUTES: 35 SECONDS");
+  const [duration, setDuration] = useState("2 HOURS: 00 MINUTES: 00 SECONDS");
   const [filteredData, setFilteredData] = useState([]);
 
   return (

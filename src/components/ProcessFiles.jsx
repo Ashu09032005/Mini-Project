@@ -2,8 +2,7 @@ import React from "react";
 import * as XLSX from "xlsx";
 
 const REQUIRED_COLUMNS = [
-    "Student Register No.", "Admn No.", "Student Name", "Block Description",
-    "Transaction-Type", "G No", "OT", "OPurpose", "IT", "IPurpose", "Duration", "Total-Duration"
+    "REGISTER NO.", "APLICATION NO.", "STUDENT NAME", "BLOCK DESCRIPTION", "TRANSACTION TYPE", "GATE NO", "OUT TIME", "OUT PURPOSE", "TRANSACTION TYPE", "GATE NO", "IN TIME", "IN PURPOSE", "DURATION", "TOTAL DURATION"
 ];
 
 const convertToSeconds = (duration) => {
@@ -28,7 +27,8 @@ const ProcessFiles = ({ files, duration, onProcessComplete }) => {
             const workbook = XLSX.read(data, { type: "array" });
             const sheetName = workbook.SheetNames[0];
             const sheet = workbook.Sheets[sheetName];
-            const jsonData = XLSX.utils.sheet_to_json(sheet);
+            const jsonData = XLSX.utils.sheet_to_json(sheet, { range: 3 });
+
 
             const fileColumns = Object.keys(jsonData[0] || {});
             const missingColumns = REQUIRED_COLUMNS.filter(col => !fileColumns.includes(col));
@@ -39,8 +39,8 @@ const ProcessFiles = ({ files, duration, onProcessComplete }) => {
             }
 
             const validRecords = jsonData.filter((record) => {
-                if (!record.Duration) return false;
-                const recordDuration = convertToSeconds(record.Duration);
+                if (!record["DURATION"]) return false;
+                const recordDuration = convertToSeconds(record["DURATION"]);
                 return recordDuration >= maxDuration;
             });
 
